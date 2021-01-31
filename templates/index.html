@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<title>Chronic kidney disease predictor</title>
+<style>   
+Body {  
+font-family: Calibri, Helvetica, sans-serif;  
+background-color:hsl(0, 0%, 71%);  
+} 
+button {   
+background-color:#37dbb0 ;   
+width: 60%;  
+color: white;   
+padding: 15px;   
+margin: 0px 0px;   
+border: 1px solid grey;
+border-radius: 30px;		
+cursor: pointer; 
+
+}  
+input[type=text], input[type = Password ] {   
+width: 50%;  
+margin: 20px  10;  
+padding: 12px 20px;     
+border: 5px solid grey;   
+border-radius: 30px;
+box-sizing:border-box;   
+} 
+<!--button:hover {   
+opacity: 0.7;   
+} 
+.cancelbtn {   
+width: auto;   
+padding: 10px 18px;  
+margin: 10px 5px;  
+} -->   
+</style>
+
+</head>
+<body>
+<br>
+<center> <h1 style="text-shadow: 2px 2px 5px grey;"><font size="10" color="#37dbb0">Chronic Kidney Disease Prediction</font></h1> </center>
+<center><form method="post"> 
+<div class="container">
+<center><label style="text-shadow: 2px 2px 5px grey;"><font size="6" color="#37dbb0"> </center>
+<table>
+	<tr><td> Age </td><td> <input type=number id='V1' name='V1' placeholder="Age (in years) " required >              </td></tr>
+	<tr><td> bp </td><td>  <input type=number id='V2' name='V2' placeholder="bp (in mm/Hg) " >                                   </td></tr>
+	<tr><td> al</td><td>   <input type=number id='V3' name='V3' placeholder="al" >                                               </td></tr>
+	<tr><td> rbc</td><td>  <input type=radio  id='V4' name='V4' value=1> Normal <input  id='V4' name='V4' type=radio   value=0> Abnormal</td></tr>
+	<tr><td> sod</td><td>  <input type=number id='V5' name='V5' placeholder="sod(in mEq/L)">                                     </td></tr>
+	<tr><td> pot</td><td>  <input type=number id='V6' name='V6' placeholder="pot(in mEq/L)">                                     </td></tr>
+	<tr><td> wc</td><td>   <input type=number id='V7' name='V7' placeholder="wc(in cells/cumm)">                                 </td></tr>
+	<tr><td> dm</td><td>   <input type=radio  id='V8' name='V8' value=1> Yes <input  id='V8' name='V8' type=radio   value=0> No     </td></tr>
+	<tr><td>appet</td><td> <input type=radio  id='V9' name='V9' value=1> good<input id='V9' name='V9' type=radio   value=0> poor    </td></tr>
+	<tr><td colspan=2 align=center><br><button  type="submit">Predict Probability</button> </td>   </td></tr>
+</table><br><div style="color:red;"> {{ pred }}</div><br>
+</form></center>  
+</div>
+</body>
+</html>
