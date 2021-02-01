@@ -15,7 +15,7 @@ def login():
 		if username ==  'Engineers' and password == 'upcoming':
 			return render_template('index.html')
 		else:
-			return ("<h1 style='color: red;'>Invalid Syntax!</h1>")
+			return ("<h1 style='color: red;'>Incorrect username or password !</h1>")
 	return render_template('login.html')
 
 @app.route('/')
